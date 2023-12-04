@@ -82,3 +82,16 @@ let orders = [
 ];
 
 // Start coding here
+function sumBS(objOrders,cName){
+  let sum = 0;
+  for(let i=0;i<objOrders.length ;i++){
+    if(objOrders[i].customerName === cName){
+      sum += (objOrders[i].productPrice*objOrders[i].productQuantity);
+    }
+  }
+  return sum;
+}
+
+let result = sumBS(orders,"Birdie Shepland");
+console.log(`Total paid amount of Birdie Shepland: ${result} Baht
+`);

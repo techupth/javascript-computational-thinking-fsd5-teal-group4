@@ -82,3 +82,16 @@ let orders = [
 ];
 
 // Start coding here
+function max(objOrders){
+  let maxPrice = objOrders[0];
+  for(let i=0;i<objOrders.length ;i++){
+    if(maxPrice.productPrice < objOrders[i].productPrice){
+      maxPrice = objOrders[i]
+    }
+  }
+  return maxPrice.productName;
+}
+
+let result = max(orders);
+console.log(`The most expensive product in orders: ${result}
+`)
