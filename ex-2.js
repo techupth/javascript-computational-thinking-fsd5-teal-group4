@@ -82,3 +82,15 @@ let orders = [
 ];
 
 // Start coding here
+function sumJCB(objOrders,ccType){
+  let sum = 0;
+  for(let i = 0; i < objOrders.length ; i++){
+    if(objOrders[i].creditCardType === ccType){
+      sum += (objOrders[i].productPrice*objOrders[i].productQuantity)
+    }
+  }
+  return sum;
+}
+
+let result = sumJCB(orders,"jcb");
+console.log(`Paid by JCB credit card amount: (${result})`)
