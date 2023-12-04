@@ -82,3 +82,13 @@ let orders = [
 ];
 
 // Start coding here
+let totalPayment=0;
+for(let i=0;i<orders.length;i++){
+  console.log(orders[i].creditCardType)
+
+  if(orders[i].customerName.includes("Birdie Shepland")){
+  console.log(orders[i].id);
+  totalPayment = totalPayment + orders[i].productPrice*orders[i].productQuantity
+ } 
+}
+console.log("Total paid amount of Birdie Shepland:"+" " +totalPayment+" ")

@@ -82,3 +82,12 @@ let orders = [
 ];
 
 // Start coding here
+let highPrice=orders[0].productPrice
+let orderId=""
+for (let i = 0; i < orders.length; i++) {
+  if(orders[i].productPrice>highPrice){
+    highPrice=orders[i].productPrice*orders[i].productQuantity
+    orderId=orders[i].id
+}
+}
+console.log("The most expensive order is order id"+" "+orderId+"("+ highPrice +" "+"Baht"+")")

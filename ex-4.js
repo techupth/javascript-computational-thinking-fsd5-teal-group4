@@ -82,3 +82,13 @@ let orders = [
 ];
 
 // Start coding here
+let highPrice=orders[0].productPrice
+let nameProduct=""
+for (let i = 0; i < orders.length; i++) {
+  if(orders[i].productPrice>highPrice){
+    highPrice=orders[i].productPrice
+    nameProduct=orders[i].productName
+}
+}
+console.log("Total paid amount of Birdie Shepland:"+" "+nameProduct)
+

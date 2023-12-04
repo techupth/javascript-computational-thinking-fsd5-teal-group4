@@ -82,3 +82,13 @@ let orders = [
 ];
 
 // Start coding here
+let jcbCard=0;
+for(let i=0;i<orders.length;i++){
+  console.log(orders[i].creditCardType)
+
+  if(orders[i].creditCardType.includes("jcb")){
+  console.log(orders[i].id);
+  jcbCard = jcbCard + orders[i].productPrice*orders[i].productQuantity
+ } 
+}
+console.log("Paid by JCB credit card amount:"+" " +jcbCard+" ")
